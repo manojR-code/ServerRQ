@@ -25,7 +25,7 @@ app.post('/', async (req, res) => {
         if (error) {
             return res.status(500).send('Error sending email');
         }
-        console.log('Email sent:', info.response+" Email Sent To "+req.body.email);
+        console.log('Email sent:', info.response+" Email Sent To "+req.body.email+"Description "+req.body.description);
         res.status(200).send('Email sent successfully');
     });
 });
