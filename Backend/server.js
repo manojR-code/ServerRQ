@@ -23,10 +23,9 @@ app.post('/', async (req, res) => {
     };
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.error('Error sending email:', error);
             return res.status(500).send('Error sending email');
         }
-        console.log('Email sent:', info.response);
+        console.log('Email sent:', info.response+" Email Sent To "+req.body.email);
         res.status(200).send('Email sent successfully');
     });
 });
