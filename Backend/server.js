@@ -13,7 +13,6 @@ const transporter = mailer.createTransport({
         pass: "qbaf umtj sfbr baht"
     }
 });
-app.get('/hello',(req,res)=>{res.json({'age':21})});
 app.post('/', async (req, res) => { 
 
     const mailOptions = {
