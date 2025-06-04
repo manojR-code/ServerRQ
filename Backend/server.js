@@ -13,6 +13,7 @@ const transporter = mailer.createTransport({
         pass: "qbaf umtj sfbr baht"
     }
 });
+app.get('/hello',(req,res)=>{res.send("hello");})
 app.post('/', async (req, res) => { 
 
     const mailOptions = {
